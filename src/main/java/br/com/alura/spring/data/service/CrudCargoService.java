@@ -29,5 +29,18 @@ public class CrudCargoService {
 		cargoRepository.save(cargo);
 		System.out.println("Salvo");
 	}
+	
+	private void atualizar(Scanner scanner) {
+		System.out.println("Id");
+		int id = scanner.nextInt();
+		System.out.println("Descricao do cargo");
+		String descricao = scanner.next();
+		
+		Cargo cargo = new Cargo();
+		cargo.setId(id);
+		cargo.setDescricao(descricao);
+		cargoRepository.save(cargo);
+		System.out.println("Atualizado");
+	}
 
 }
